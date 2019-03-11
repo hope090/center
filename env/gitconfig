@@ -1,0 +1,9 @@
+[user]
+	name  = hope090  
+	email = 13572504657@163.com
+[merge]
+	tool = vimdiff
+[alias]
+	show-graph = log --graph --abbrev-commit --pretty=online
+  st = status
+  ci = commit

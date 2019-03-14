@@ -698,10 +698,13 @@ function SetTitle()
 "        call append(line(".")+4, "#") 
 "        call append(line(".")+5, "") 
 endfunction
-autocmd BufNewFile       *.py   exec ":call Pythonstart()" 
-function Pythonstart()
-        call setline(1,  "\#\!/installtop/lx24-amd64/vendor/cadence/Cynthesizer_5.0.7/tools.5.0b2.Linux.SC23.gcc446/bin/python2.7") 
-        call setline(2,  "\# encoding: UTF-8") 
+autocmd BufNewFile       *.pl   exec ":call SetTitlePL()" 
+function SetTitlePL()
+        call setline(1,  "#!/usr/bin/perl") 
+endfunction
+autocmd BufNewFile       *.rb   exec ":call SetTitleRB()" 
+function SetTitleRB()
+        call setline(1,  "#!/usr/bin/ruby") 
 endfunction
 "autocmd BufNewFile  * normal G
 "autocmd BufWrite,BufWritePre,FileWritePre  *.csh    ks|call LastModified()|'s  

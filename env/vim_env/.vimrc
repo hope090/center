@@ -272,7 +272,7 @@ function! DIFF_WITH_SVN_(rev)
   diffthis
   exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
 endfunction
-com! DiffSVN    call DIFF_WITH_SVN_("'BASE'")
+com! -nargs=1 DiffSVN    call DIFF_WITH_SVN_(<f-args>)
 "diff with the old svn
 com! DiffOLDSVN call DIFF_WITH_SVN_("'PREV'")
 "diff with the newest svn
